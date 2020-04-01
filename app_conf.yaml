@@ -1,0 +1,16 @@
+version: 1
+datastore:
+  filename: data.json
+  user: shaunt
+  password: Passw0rd
+  hostname: localhost
+  port: 3306
+  db: events
+scheduler:
+  period_sec: 5
+eventstore:
+  url: http://localhost:8090
+kafka:
+  server: localhost
+  port: 9092
+  topic: events

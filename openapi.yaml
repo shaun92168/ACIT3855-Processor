@@ -1,0 +1,40 @@
+swagger: '2.0'
+info:
+  description: This is a simple API
+  version: 1.0.0
+  title: Event Statistics
+
+paths:
+  /events/stats:
+    get:
+      summary: get events stats for scan in and body info
+      operationId: app.get_record_stats
+      description: Gets record stats
+      produces:
+      - application/json
+      responses:
+        200:
+          description: current stats
+          schema:
+            $ref: '#/definitions/RecordStats'
+        400:
+          description: stats do not exist
+
+definitions:
+  RecordStats:
+    type: object
+    required:
+    - num_scanin_records
+    - num_bi_records
+    - updated_timestamp
+    properties:
+      num_scanin_records:
+        type: integer
+        example: 1023
+      num_bi_records:
+        type: integer
+        example: 1023
+      updated_timestamp:
+        type: string
+        format: date-time
+        example: 2016-08-29T09:12:33.001Z
