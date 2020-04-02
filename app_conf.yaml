@@ -1,9 +1,9 @@
 version: 1
 datastore:
   filename: data.json
-  user: shaunt
-  password: Passw0rd
-  hostname: localhost
+  user: shaun
+  password: shaun
+  hostname: acit3855-shaun.westus2.cloudapp.azure.com
   port: 3306
   db: events
 scheduler:
@@ -11,6 +11,6 @@ scheduler:
 eventstore:
   url: http://localhost:8090
 kafka:
-  server: localhost
+  server: acit3855-shaun.westus2.cloudapp.azure.com
   port: 9092
   topic: events
